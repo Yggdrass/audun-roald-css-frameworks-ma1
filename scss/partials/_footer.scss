@@ -1,0 +1,37 @@
+footer {
+  flex-shrink: 0;
+  background-color: getColour(primary);
+  font-size: 0.8rem;
+
+  .footer__contact,
+  .copyright__text {
+    padding: 0.4em;
+    font-size: 12px;
+  }
+
+  .container {
+    @extend .container-flex;
+    color: getColour(footer__text);
+    display: block;
+    text-align: center;
+    padding: 1.2em;
+  }
+
+  @media (min-width: 470px) {
+    footer {
+      font-size: 1rem;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .footer__contact {
+      padding-left: 5.5em;
+    }
+
+    .copyright__text {
+      padding-right: 5.5em;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+header {
+  background-color: getColour(primary);
+
+  .container {
+    @extend .container-flex;
+    display: none;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .fixed-top {
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: getColour(logo_text);
+    font-family: $font-primary;
+  }
+
+  .nav,
+  .nav-link {
+    color: getColour(footer__text);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+  }
+
+  .active {
+    color: getColour(tertiary);
+  }
+
+  .nav {
+    padding-right: 3em;
+  }
+
+  @media (min-width: 470px) {
+    .fixed-top {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .logo {
+      padding-left: 2.1em;
+    }
+  }
+}

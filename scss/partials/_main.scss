@@ -1,0 +1,54 @@
+main {
+  .container {
+    @extend .container-flex;
+
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1140px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    padding-bottom: 10em;
+
+    @media (min-width: 470px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.title {
+  font-family: $font-primary;
+  color: getColour(heading);
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  font-size: 2.1rem;
+
+  @media (min-width: 470px) {
+    padding: 1.5em 0;
+    font-size: 34px;
+  }
+}
+
+.box {
+  background-color: getColour(primary);
+  width: 357px;
+  height: 355px;
+  border-radius: 1em;
+  border: 0.2em solid getColour(primary);
+
+  &.pinkBox {
+    background-color: getColour(tertiary);
+    border-color: getColour(primary);
+  }
+
+  &.pinkBorder {
+    border-color: getColour(tertiary);
+  }
+
+  @media (min-width: 470px) {
+    width: 264px;
+    height: 263px;
+  }
+}
